@@ -541,15 +541,14 @@ if (resourceGrid) {
 
 const tecnoverGrid = document.querySelector("#tecnover-grid");
 
-const gtbMainImage = document.querySelector("#gtb-main-image");
-
-if (gtbMainImage) {
-  const galleryButtons = [...document.querySelectorAll("[data-listing-image]")];
-
+document.querySelectorAll(".avito-gallery").forEach((gallery) => {
+  const mainImage = gallery.querySelector(".avito-main-photo img");
+  const galleryButtons = [...gallery.querySelectorAll("[data-listing-image]")];
+  if (!mainImage) return;
   galleryButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      gtbMainImage.src = button.dataset.listingImage;
-      gtbMainImage.alt = button.dataset.listingAlt;
+      mainImage.src = button.dataset.listingImage;
+      mainImage.alt = button.dataset.listingAlt;
       galleryButtons.forEach((item) => {
         const selected = item === button;
         item.classList.toggle("is-active", selected);
@@ -557,7 +556,7 @@ if (gtbMainImage) {
       });
     });
   });
-}
+});
 
 if (tecnoverGrid) {
   const cards = [...tecnoverGrid.querySelectorAll("[data-tecnover-card]")];
