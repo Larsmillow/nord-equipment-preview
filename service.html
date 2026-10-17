@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f8fb">
+    <meta
+      name="description"
+      content="Памятка покупателю Nord: что проверить перед оплатой, доставкой, гарантией и обращением в сервис."
+    >
+    <title>Покупателям — Nord</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="service-page-body">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Nord — на главную">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-copy">
+            <span class="brand-name">nord<span>.</span></span>
+            <span class="brand-caption">оборудование для дела</span>
+          </span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Открыть меню"
+        >
+          <span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+          <a href="catalog.html">Каталог</a>
+          <a href="service.html" aria-current="page">Покупателям</a>
+          <a href="resources.html">Материалы</a>
+          <a href="selection.html">Помощь с выбором</a>
+          <a href="index.html#about">О Nord</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+        <a class="header-cta" href="catalog.html">
+          <span>В каталог</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="service-hero section-pad" id="top">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Покупателям</span>
+          </nav>
+          <div class="service-hero-grid">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Условия без сюрпризов</p>
+              <h1>Покупайте,<br><span>понимая детали.</span></h1>
+              <p class="service-lead">Цена — только часть решения. До оплаты важно знать, что именно вы покупаете, как получите оборудование и к кому обратиться после покупки.</p>
+              <a class="button button-primary" href="#before-buying">Проверить перед покупкой <span aria-hidden="true">↓</span></a>
+            </div>
+            <aside class="service-status" role="note">
+              <div class="service-status-mark" aria-hidden="true">i</div>
+              <div>
+                <span class="service-status-label">ВАЖНО ДЛЯ ЭТОГО ПРОТОТИПА</span>
+                <h2>Условия Nord ещё предстоит подтвердить.</h2>
+                <p>Здесь нет выдуманных сроков доставки, способов оплаты или обещаний по гарантии. Перед публикацией их нужно заменить официальной информацией компании.</p>
+              </div>
+            </aside>
+          </div>
+          <div class="service-trust-strip" aria-label="Что важно проверить">
+            <span>01 <b>Товар и комплект</b></span>
+            <span>02 <b>Оплата и доставка</b></span>
+            <span>03 <b>Гарантия и сервис</b></span>
+            <span>04 <b>Возврат и документы</b></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-check-section section-pad" id="before-buying" aria-labelledby="service-check-title">
+        <div class="container">
+          <div class="service-section-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Ваш контрольный список</p>
+              <h2 id="service-check-title">Пять минут сейчас.<br><span>Меньше вопросов потом.</span></h2>
+            </div>
+            <p>Отметьте пункты, которые уже проверили. Список работает только в этом окне — сайт не записывает ваши отметки.</p>
+          </div>
+
+          <div class="service-checklist-layout">
+            <div class="service-checklist" id="buyer-checklist" aria-label="Контрольный список перед покупкой">
+              <label class="service-check-item">
+                <input type="checkbox" name="check-product">
+                <span class="service-check-box" aria-hidden="true"></span>
+                <span><strong>Подтвердили точную модель и комплект</strong><small>Сверьте артикул, состав поставки, расходные материалы и нужные принадлежности.</small></span>
+                <span class="service-check-number">01</span>
+              </label>
+              <label class="service-check-item">
+                <input type="checkbox" name="check-fit">
+                <span class="service-check-box" aria-hidden="true"></span>
+                <span><strong>Уточнили совместимость с вашей задачей</strong><small>Попросите подтвердить совместимость с материалом и режимом работы по документации.</small></span>
+                <span class="service-check-number">02</span>
+              </label>
+              <label class="service-check-item">
+                <input type="checkbox" name="check-price">
+                <span class="service-check-box" aria-hidden="true"></span>
+                <span><strong>Получили актуальную итоговую цену</strong><small>Уточните, что включено в стоимость и какие дополнительные расходы возможны.</small></span>
+                <span class="service-check-number">03</span>
+              </label>
+              <label class="service-check-item">
+                <input type="checkbox" name="check-delivery">
+                <span class="service-check-box" aria-hidden="true"></span>
+                <span><strong>Согласовали доставку до вашего города</strong><small>Проверьте способ, стоимость, срок, передачу груза и порядок действий при повреждении.</small></span>
+                <span class="service-check-number">04</span>
+              </label>
+              <label class="service-check-item">
+                <input type="checkbox" name="check-warranty">
+                <span class="service-check-box" aria-hidden="true"></span>
+                <span><strong>Поняли, как действуют гарантия и сервис</strong><small>Попросите условия письменно: срок, начало отсчёта, исключения, адрес и порядок обращения.</small></span>
+                <span class="service-check-number">05</span>
+              </label>
+              <label class="service-check-item">
+                <input type="checkbox" name="check-documents">
+                <span class="service-check-box" aria-hidden="true"></span>
+                <span><strong>Уточнили документы и правила возврата</strong><small>Проверьте, какие документы выдаются и какие официальные правила применяются к покупке.</small></span>
+                <span class="service-check-number">06</span>
+              </label>
+            </div>
+            <aside class="service-check-progress" aria-live="polite">
+              <div class="service-progress-ring" aria-hidden="true"><span id="check-count">0</span><small>/ 6</small></div>
+              <strong id="check-progress-title">Начните с главного</strong>
+              <p id="check-progress-copy">Сверяйте условия и документы до оплаты. Если что-то непонятно — попросите письменное подтверждение.</p>
+              <button class="service-reset-button" id="reset-checklist" type="button">Снять все отметки</button>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-terms-section section-pad" aria-labelledby="terms-heading">
+        <div class="container">
+          <div class="service-section-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Понятно о важном</p>
+              <h2 id="terms-heading">Что стоит узнать<br><span>до оформления.</span></h2>
+            </div>
+            <p>Разделы подготовлены как ориентир покупателю. Конкретные условия появятся здесь после проверки Nord.</p>
+          </div>
+          <div class="service-terms-grid">
+            <article class="service-term-card">
+              <span class="service-term-number">01 / ДОСТАВКА</span>
+              <div class="service-term-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M5 13h24v22H5zM29 21h8l6 7v7H29z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="14" cy="36" r="4" fill="white" stroke="currentColor" stroke-width="2.5"/><circle cx="36" cy="36" r="4" fill="white" stroke="currentColor" stroke-width="2.5"/><path d="M10 20h13m-13 5h9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+              </div>
+              <h3>Как оборудование приедет к вам?</h3>
+              <p>Регион, способ, срок, стоимость, страховка и ответственность за перевозку — эти детали должны быть подтверждены до оплаты.</p>
+              <span class="service-term-status">Условия Nord уточняются</span>
+            </article>
+            <article class="service-term-card">
+              <span class="service-term-number">02 / ОПЛАТА</span>
+              <div class="service-term-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M7 18h34M13 29h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="34" cy="29" r="3" stroke="currentColor" stroke-width="2.5"/></svg>
+              </div>
+              <h3>За что и как вы платите?</h3>
+              <p>Запросите итоговую сумму, доступные способы оплаты, документы, получателя платежа и условия возврата средств.</p>
+              <span class="service-term-status">Онлайн-оплата не подключена</span>
+            </article>
+            <article class="service-term-card">
+              <span class="service-term-number">03 / ГАРАНТИЯ</span>
+              <div class="service-term-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M24 5 39 11v11c0 10-6 16-15 21C15 38 9 32 9 22V11l15-6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="m17 23 5 5 10-11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Куда обращаться, если нужна помощь?</h3>
+              <p>Уточните гарантийный срок, его начало, исключения, сервисный адрес, наличие запчастей и порядок диагностики.</p>
+              <span class="service-term-status">Гарантия не подтверждена</span>
+            </article>
+            <article class="service-term-card">
+              <span class="service-term-number">04 / ВОЗВРАТ</span>
+              <div class="service-term-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M11 16h26v25H11z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M17 16v-4a7 7 0 0 1 14 0v4M18 29l4 4 8-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Что делать, если товар не подошёл?</h3>
+              <p>До покупки попросите ссылку на официальные правила возврата, обмена и действий при обнаружении недостатка.</p>
+              <span class="service-term-status">Правила Nord уточняются</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-faq-section section-pad" aria-labelledby="service-faq-title">
+        <div class="container service-faq-grid">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Ответы без догадок</p>
+            <h2 id="service-faq-title">Частые вопросы<br><span>покупателей.</span></h2>
+            <p>Если ответ зависит от конкретного товара или региона, он должен быть уточнён до покупки, а не угадан по шаблону.</p>
+          </div>
+          <div class="service-faq-list">
+            <details>
+              <summary>Можно ли сейчас оформить заказ на сайте?</summary>
+              <p>Нет. Это прототип: корзина, заказ и оплата не подключены. Кнопки запроса на демонстрационных страницах не отправляют данные Nord.</p>
+            </details>
+            <details>
+              <summary>Почему сроки, доставка и гарантия не указаны?</summary>
+              <p>Подтверждённых условий Nord пока нет. Не публикуем догадки: запросите их у продавца и проверьте до оплаты.</p>
+            </details>
+            <details>
+              <summary>Что делать, если аппарат нужен для конкретного материала?</summary>
+              <p>Сообщите точное название материала и условия работы. Попросите подтвердить совместимость со ссылкой на документацию производителя или письменный ответ.</p>
+            </details>
+            <details>
+              <summary>Можно ли считать цену RT-8990 на макете актуальной?</summary>
+              <p>Нет. Модель и цена 189 900 ₽ взяты из чернового макета и требуют подтверждения. Это не оферта и не итоговая стоимость.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-bottom-cta">
+        <div class="container service-bottom-cta-inner">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Следующий шаг</p>
+            <h2>Сначала — ясность.<br><span>Потом решение.</span></h2>
+            <p>Посмотрите демонстрационную карточку RT-8990 или подготовьте список вопросов перед разговором о покупке.</p>
+          </div>
+          <div class="service-bottom-actions">
+            <a class="button button-primary" href="product.html">К карточке RT-8990 <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="catalog.html">Открыть каталог <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="brand footer-brand" href="index.html" aria-label="Nord — на главную">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-copy"><span class="brand-name">nord<span>.</span></span><span class="brand-caption">оборудование для дела</span></span>
+        </a>
+        <p>Инструмент, который работает<br>вместе с вами.</p>
+        <a href="#top" class="back-top">Наверх <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="container footer-bottom">
+        <span>© Nord</span>
+        <span>Условия требуют подтверждения перед публикацией.</span>
+        <div class="footer-links">
+          <a href="feedback.html">Обратная связь <span aria-hidden="true">↗</span></a>
+          <a href="catalog.html">В каталог <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

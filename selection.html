@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f8fb">
+    <meta
+      name="description"
+      content="Опишите задачу для окраски — Nord поможет подготовить вопросы и вводные для консультации по оборудованию."
+    >
+    <title>Помощь с выбором оборудования — Nord</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="selection-page-body">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Nord — на главную">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-copy">
+            <span class="brand-name">nord<span>.</span></span>
+            <span class="brand-caption">оборудование для дела</span>
+          </span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Открыть меню"
+        >
+          <span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+          <a href="catalog.html">Каталог</a>
+          <a href="service.html">Покупателям</a>
+          <a href="resources.html">Материалы</a>
+          <a href="index.html#about">О Nord</a>
+          <a href="selection.html" aria-current="page">Помощь с выбором</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+        <a class="header-cta" href="index.html#contacts">
+          <span>Связаться с Nord</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="selection-hero section-pad" id="top">
+        <div class="container selection-container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Помощь с выбором</span>
+          </nav>
+
+          <div class="selection-intro">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Помощь с выбором</p>
+              <h1>Сначала разберёмся<br><span>в вашей задаче.</span></h1>
+              <p class="selection-lead">Ответьте на несколько необязательных вопросов. В конце получите краткое описание задачи, которое можно добавить к запросу в Nord.</p>
+            </div>
+            <aside class="selection-promise">
+              <span aria-hidden="true">i</span>
+              <p>Это не автоматический подбор модели. Технические рекомендации появятся только после проверки ассортимента и характеристик Nord.</p>
+            </aside>
+          </div>
+
+          <section class="selection-card" aria-labelledby="question-heading">
+            <div class="selection-progress-row">
+              <span id="selection-step-count" role="status" aria-live="polite">Вопрос 1 из 4</span>
+              <span>Можно пропустить любой вопрос</span>
+            </div>
+            <div class="selection-progress" role="progressbar" aria-label="Ход подбора" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1">
+              <span class="selection-progress-fill"></span>
+            </div>
+
+            <div class="selection-context" id="selection-context" hidden>
+              Вопрос по модели: <strong id="selection-model"></strong>
+            </div>
+
+            <div class="selection-wizard" id="selection-wizard">
+              <fieldset class="selection-step" data-step="0">
+                <legend id="question-heading" tabindex="-1">Что вы планируете окрашивать?</legend>
+                <p class="selection-question-hint">Выберите один самый близкий вариант — это не ограничивает консультацию.</p>
+                <div class="selection-options" role="group" aria-label="Что планируете окрашивать?">
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Стены или потолки">Стены или потолки</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Фасад или крупный объект">Фасад или крупный объект</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Металлоконструкции или ограждения">Металлоконструкции или ограждения</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Дерево или мебель">Дерево или мебель</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Другое или пока не знаю">Другое или пока не знаю</button>
+                </div>
+              </fieldset>
+
+              <fieldset class="selection-step" data-step="1" hidden>
+                <legend tabindex="-1">С каким материалом планируете работать?</legend>
+                <p class="selection-question-hint">Совместимость оборудования с материалом обязательно нужно подтвердить.</p>
+                <div class="selection-options" role="group" aria-label="Материал для работы">
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Краска или грунтовка на водной основе">Краска или грунтовка на водной основе</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Эмаль, лак или другой состав">Эмаль, лак или другой состав</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Защитный или специальный состав">Защитный или специальный состав</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Пока не определился">Пока не определился</button>
+                </div>
+              </fieldset>
+
+              <fieldset class="selection-step" data-step="2" hidden>
+                <legend tabindex="-1">Какой объём работ ожидается?</legend>
+                <p class="selection-question-hint">Примерный ответ поможет сформулировать запрос, но не заменяет расчёт производительности.</p>
+                <div class="selection-options" role="group" aria-label="Объём работ">
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Небольшой разовый объём">Небольшой разовый объём</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Несколько помещений или регулярные работы">Несколько помещений или регулярные работы</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Крупный объект или постоянные работы">Крупный объект или постоянные работы</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Объём пока неизвестен">Объём пока неизвестен</button>
+                </div>
+              </fieldset>
+
+              <fieldset class="selection-step" data-step="3" hidden>
+                <legend tabindex="-1">Что особенно важно при выборе?</legend>
+                <p class="selection-question-hint">Можно пропустить вопрос и обсудить приоритеты с консультантом.</p>
+                <div class="selection-options" role="group" aria-label="Приоритеты выбора">
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Простота настройки и обслуживания">Простота настройки и обслуживания</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Подходящий вариант для регулярной работы">Подходящий вариант для регулярной работы</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Вес и удобство перемещения">Вес и удобство перемещения</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Сначала хочу понять бюджет и комплектацию">Сначала хочу понять бюджет и комплектацию</button>
+                  <button type="button" class="selection-option" aria-pressed="false" data-value="Нужна помощь разобраться в приоритетах">Нужна помощь разобраться в приоритетах</button>
+                </div>
+              </fieldset>
+
+              <p class="selection-validation" id="selection-validation" role="status" aria-live="polite"></p>
+              <div class="selection-controls">
+                <button class="selection-back" id="selection-back" type="button" disabled>← Назад</button>
+                <div class="selection-forward-controls">
+                  <button class="selection-skip" id="selection-skip" type="button">Пропустить</button>
+                  <button class="button button-primary" id="selection-next" type="button">Дальше <span aria-hidden="true">→</span></button>
+                </div>
+              </div>
+            </div>
+
+            <section class="selection-result" id="selection-result" aria-labelledby="result-heading" hidden>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Ваш бриф</p>
+              <h2 id="result-heading" tabindex="-1">Кратко о задаче</h2>
+              <p class="selection-result-lead">Проверьте вводные. Этот список помогает начать разговор, но сам по себе не является технической рекомендацией.</p>
+              <dl class="selection-summary" id="selection-summary"></dl>
+              <div class="selection-result-note">
+                <strong>Следующий шаг</strong>
+                <p>Перед покупкой нужно сверить совместимость материала, характеристики модели, комплектность, цену и наличие.</p>
+              </div>
+              <div class="selection-result-controls">
+                <button class="selection-back" id="selection-edit" type="button">← Изменить ответы</button>
+                <a class="button button-primary" id="selection-contact" href="index.html#contacts">Передать вводные в Nord <span aria-hidden="true">↗</span></a>
+              </div>
+            </section>
+          </section>
+          <p class="selection-privacy-note">Ответы временно хранятся только в session storage этой вкладки, не попадают в адресную строку и не отправляются на сервер. Форма консультации пока демонстрационная и тоже не передаёт данные.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="brand footer-brand" href="index.html" aria-label="Nord — на главную">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-copy"><span class="brand-name">nord<span>.</span></span><span class="brand-caption">оборудование для дела</span></span>
+        </a>
+        <p>Инструмент, который работает<br>вместе с вами.</p>
+        <a href="#top" class="back-top">Наверх <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="container footer-bottom">
+        <span>© Nord</span>
+        <span>Помощник с выбором — демонстрационный прототип.</span>
+        <div class="footer-links">
+          <a href="feedback.html">Обратная связь <span aria-hidden="true">↗</span></a>
+          <a href="catalog.html">В каталог <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

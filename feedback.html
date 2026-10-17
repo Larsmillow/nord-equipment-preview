@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f8fb">
+    <meta
+      name="description"
+      content="Обратная связь Nord: подготовьте обращение, замечание или предложение по оборудованию и работе компании."
+    >
+    <title>Обратная связь — Nord</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Nord — на главную">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-copy">
+            <span class="brand-name">nord<span>.</span></span>
+            <span class="brand-caption">оборудование для дела</span>
+          </span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Открыть меню"
+        >
+          <span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+          <a href="catalog.html">Каталог</a>
+          <a href="service.html">Покупателям</a>
+          <a href="resources.html">Материалы</a>
+          <a href="index.html#about">О Nord</a>
+          <a href="selection.html">Помощь с выбором</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+        <a class="header-cta" href="#feedback-form">
+          <span>Оставить обращение</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" class="feedback-page">
+      <section class="feedback-hero section-pad" id="top">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Обратная связь</span>
+          </nav>
+          <div class="feedback-hero-grid">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Обратная связь Nord</p>
+              <h1>Если что-то<br>пошло не так —<br><span>скажите прямо.</span></h1>
+              <p class="feedback-lead">
+                Замечание по оборудованию, вопрос по консультации или идея, как сделать сервис лучше, — подготовьте обращение в одном месте.
+              </p>
+              <a class="button button-primary" href="#feedback-form">Подготовить обращение <span aria-hidden="true">↓</span></a>
+            </div>
+            <aside class="feedback-promise">
+              <span class="feedback-promise-index">ПРИНЦИП NORD / 01</span>
+              <span class="feedback-promise-mark" aria-hidden="true">↗</span>
+              <h2>Не прячем<br>неудобную обратную связь.</h2>
+              <p>Опишите ситуацию фактами. Чем точнее модель, дата и суть вопроса, тем проще разобраться, что произошло.</p>
+              <div class="feedback-promise-rule"><span></span> Черновик не публикуется на сайте.</div>
+            </aside>
+          </div>
+          <div class="feedback-status" role="note">
+            <span class="feedback-status-icon" aria-hidden="true">i</span>
+            <p><strong>Важно: сайт пока прототип.</strong> Форма не отправляет и не сохраняет обращения. Она поможет собрать текст, который можно скопировать и отправить по официальному каналу после его подтверждения.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback-workbench section-pad" aria-labelledby="feedback-form-title">
+        <div class="container feedback-workbench-grid">
+          <div class="feedback-guide">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Как подготовить обращение</p>
+            <h2>Помогите нам<br><span>разобраться.</span></h2>
+            <p class="feedback-guide-intro">Не нужно подбирать «правильные» слова. Достаточно конкретики — так не придётся уточнять базовые детали.</p>
+            <div class="feedback-guide-list">
+              <article>
+                <span>01</span>
+                <div><h3>Укажите, о чём речь</h3><p>Тип обращения, модель или заказ — если это относится к ситуации.</p></div>
+              </article>
+              <article>
+                <span>02</span>
+                <div><h3>Опишите факты и последовательность</h3><p>Что произошло, когда и при каких обстоятельствах. Без паспортных, банковских и других лишних чувствительных данных.</p></div>
+              </article>
+              <article>
+                <span>03</span>
+                <div><h3>Скажите, какого решения ждёте</h3><p>Например, разъяснения, проверки ситуации или ответа на предложение.</p></div>
+              </article>
+            </div>
+            <div class="feedback-note">
+              <strong>Что будет после запуска сайта?</strong>
+              <p>Здесь должен появиться подтверждённый канал связи и понятный порядок обработки обращений. Контактные данные и сроки ответа пока не указаны намеренно.</p>
+            </div>
+          </div>
+
+          <div class="feedback-form-panel">
+            <form class="feedback-form" id="feedback-form" novalidate>
+              <p class="feedback-form-kicker">ФОРМА / ЧЕРНОВИК</p>
+              <h2 id="feedback-form-title">Расскажите, что случилось</h2>
+
+              <label for="feedback-type">Тема обращения</label>
+              <select id="feedback-type" name="type" required>
+                <option value="">Выберите тему</option>
+                <option>Жалоба или проблема</option>
+                <option>Вопрос по товару или заказу</option>
+                <option>Предложение по сервису</option>
+                <option>Благодарность</option>
+                <option>Другое</option>
+              </select>
+
+              <div class="feedback-field-row">
+                <div>
+                  <label for="feedback-model">Модель или номер заказа <span>(если есть)</span></label>
+                  <input id="feedback-model" name="model" autocomplete="off" placeholder="Например, название модели">
+                </div>
+                <div>
+                  <label for="feedback-city">Город <span>(если относится к ситуации)</span></label>
+                  <input id="feedback-city" name="city" autocomplete="address-level2" placeholder="Ваш город">
+                </div>
+              </div>
+              <label for="feedback-date">Когда произошла ситуация <span>(если известно)</span></label>
+              <input id="feedback-date" name="date" type="date">
+
+              <label for="feedback-description">Опишите ситуацию <span>(не менее 20 символов)</span></label>
+              <textarea id="feedback-description" name="description" rows="5" required minlength="20" placeholder="Что произошло? Что важно проверить?"></textarea>
+
+              <label for="feedback-expected">Какого решения вы ожидаете? <span>(необязательно)</span></label>
+              <textarea id="feedback-expected" name="expected" rows="3" placeholder="Например, разъяснения или ответа по ситуации"></textarea>
+
+              <label for="feedback-contact">Контакт для ответа <span>(необязательно, укажите только если хотите получить ответ)</span></label>
+              <input id="feedback-contact" name="contact" autocomplete="email" placeholder="Телефон или электронная почта">
+
+              <button class="button button-primary feedback-submit" type="submit">Собрать текст обращения <span aria-hidden="true">↗</span></button>
+              <p class="feedback-form-status" id="feedback-form-status" role="status" aria-live="polite"></p>
+              <p class="feedback-privacy">Черновик формируется только в этой вкладке. Форма не отправляет и не сохраняет ваши данные.</p>
+
+              <div class="feedback-draft" id="feedback-draft" hidden>
+                <label for="feedback-draft-text">Готовый текст — проверьте и скопируйте</label>
+                <textarea id="feedback-draft-text" rows="10" readonly></textarea>
+                <button class="button button-secondary feedback-copy" id="feedback-copy" type="button">Скопировать текст</button>
+                <p class="feedback-copy-status" id="feedback-copy-status" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="brand footer-brand" href="index.html" aria-label="Nord — на главную">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-copy"><span class="brand-name">nord<span>.</span></span><span class="brand-caption">оборудование для дела</span></span>
+        </a>
+        <p>Инструмент, который работает<br>вместе с вами.</p>
+        <a href="#top" class="back-top">Наверх <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="container footer-bottom">
+        <span>© Nord</span>
+        <span>Прототип сайта. Обращения пока не отправляются.</span>
+        <a href="index.html">На главную <span aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+  </body>
+</html>

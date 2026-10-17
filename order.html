@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f8fb">
+    <meta
+      name="description"
+      content="Подготовьте запрос в Nord об условиях покупки окрасочного аппарата RT-8990. Демонстрационная форма не отправляет данные."
+    >
+    <title>Запрос условий покупки — Nord</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="order-page-body">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Nord — на главную">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-copy">
+            <span class="brand-name">nord<span>.</span></span>
+            <span class="brand-caption">оборудование для дела</span>
+          </span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Открыть меню"
+        >
+          <span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+          <a href="catalog.html">Каталог</a>
+          <a href="service.html">Покупателям</a>
+          <a href="resources.html">Материалы</a>
+          <a href="index.html#about">О Nord</a>
+          <a href="selection.html">Помощь с выбором</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+        <a class="header-cta" href="product.html">
+          <span>Назад к товару</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="order-page section-pad" id="top">
+        <div class="container order-container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <span aria-hidden="true">/</span>
+            <a href="catalog.html">Каталог</a>
+            <span aria-hidden="true">/</span>
+            <a href="product.html">RT-8990</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Запрос покупки</span>
+          </nav>
+
+          <div class="order-header">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Следующий шаг</p>
+              <h1>Уточните условия<br><span>покупки.</span></h1>
+              <p class="order-lead">Расскажите, как с вами связаться. Подготовим текст запроса по выбранной модели, чтобы уточнить цену, наличие и условия.</p>
+            </div>
+            <div class="order-disclaimer" role="note">
+              <span aria-hidden="true">!</span>
+              <p><strong>Это не оформление заказа и не оплата.</strong> На сайте пока нет подтверждённой цены, наличия или подключения к отправке заявок.</p>
+            </div>
+          </div>
+
+          <ol class="order-steps" aria-label="Этапы запроса">
+            <li class="is-current"><span>01</span> Данные для ответа</li>
+            <li><span>02</span> Проверка черновика</li>
+            <li><span>03</span> Отправка пока недоступна</li>
+          </ol>
+
+          <div class="order-layout">
+            <form class="order-form" id="order-form" novalidate>
+              <section class="order-item" aria-labelledby="order-item-heading">
+                <div class="order-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none"><path d="M20 20V14a5 5 0 0 1 5-5h14a5 5 0 0 1 5 5v6" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M18 20h28a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5V25a5 5 0 0 1 5-5Z" fill="white" stroke="currentColor" stroke-width="3"/><path d="M23 31h18m-18 9h11" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="m44 26 8-7m-5 0h5v5" stroke="#F2A24B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="order-item-copy">
+                  <span class="order-item-label">ПОЗИЦИЯ В ЗАПРОСЕ</span>
+                  <h2 id="order-item-heading">Окрасочный аппарат RT-8990</h2>
+                  <p>Демонстрационная позиция · модель требует подтверждения</p>
+                </div>
+                <a href="product.html" class="order-item-link">Карточка <span aria-hidden="true">↗</span></a>
+              </section>
+
+              <div class="order-field-grid">
+                <div class="order-field">
+                  <label for="order-name">Как к вам обращаться <span aria-hidden="true">*</span></label>
+                  <input id="order-name" name="name" autocomplete="name" required minlength="2" placeholder="Ваше имя">
+                  <span class="order-field-error" data-error-for="order-name"></span>
+                </div>
+                <div class="order-field">
+                  <label for="order-phone">Телефон для связи <span aria-hidden="true">*</span></label>
+                  <input id="order-phone" name="phone" type="tel" autocomplete="tel" required inputmode="tel" placeholder="+7 (___) ___-__-__">
+                  <span class="order-field-error" data-error-for="order-phone"></span>
+                </div>
+                <div class="order-field">
+                  <label for="order-city">Город <span>(необязательно)</span></label>
+                  <input id="order-city" name="city" autocomplete="address-level2" placeholder="Чтобы обсудить доставку">
+                </div>
+                <div class="order-field">
+                  <label for="order-quantity">Сколько единиц планируете?</label>
+                  <select id="order-quantity" name="quantity">
+                    <option value="1">1 единица</option>
+                    <option value="2">2 единицы</option>
+                    <option value="3">3 единицы</option>
+                    <option value="4">4 единицы</option>
+                    <option value="5">5 единиц</option>
+                    <option value="Больше 5">Больше 5</option>
+                    <option value="Пока не знаю">Пока не знаю</option>
+                  </select>
+                </div>
+                <div class="order-field order-field-full">
+                  <label for="order-comment">Вопрос или важная деталь <span>(необязательно)</span></label>
+                  <textarea id="order-comment" name="comment" rows="3" placeholder="Например, нужно уточнить совместимость с материалом и состав комплекта"></textarea>
+                </div>
+              </div>
+
+              <div class="order-form-actions">
+                <p>Поля со звёздочкой нужны только для демонстрационной проверки формы.</p>
+                <button class="button button-primary" type="submit">Подготовить запрос <span aria-hidden="true">→</span></button>
+              </div>
+              <p class="order-status" id="order-status" role="status" aria-live="polite"></p>
+              <p class="order-form-note">Демо: данные остаются только в текущей вкладке; серверу они не передаются и не сохраняются.</p>
+            </form>
+
+            <aside class="order-summary">
+              <p class="order-summary-kicker">ВАЖНО ДО ПОКУПКИ</p>
+              <h2>Сначала подтвердим детали.</h2>
+              <ul>
+                <li><span aria-hidden="true">01</span> Актуальную цену и наличие</li>
+                <li><span aria-hidden="true">02</span> Характеристики и совместимость</li>
+                <li><span aria-hidden="true">03</span> Комплектацию и расходники</li>
+                <li><span aria-hidden="true">04</span> Возможность и условия доставки</li>
+              </ul>
+              <div class="order-price-note">
+                <span>Цена в макете</span>
+                <strong>189 900 ₽</strong>
+                <small>Черновая цена. Итог не рассчитывается.</small>
+              </div>
+              <p class="order-summary-foot">Никаких платёжных данных запрашивать не нужно: онлайн-оплата не подключена.</p>
+              <a class="order-service-link" href="service.html#before-buying">Чек-лист перед покупкой <span aria-hidden="true">→</span></a>
+            </aside>
+          </div>
+
+          <section class="order-review" id="order-review" aria-labelledby="review-heading" hidden>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Проверка</p>
+            <h2 id="review-heading" tabindex="-1">Черновик запроса готов.</h2>
+            <p class="order-review-lead"><strong>Он не отправлен.</strong> Сайт пока не подключён к обработке заявок, а реальные контакты Nord ещё нужно добавить. Скопируйте текст, чтобы использовать его позже.</p>
+            <label for="order-draft">Текст для копирования</label>
+            <textarea id="order-draft" readonly rows="8"></textarea>
+            <div class="order-review-actions">
+              <button class="button button-primary" id="copy-order-draft" type="button">Скопировать запрос <span aria-hidden="true">↗</span></button>
+              <button class="order-edit-button" id="edit-order" type="button">← Вернуться к данным</button>
+            </div>
+            <p class="order-status" id="copy-status" role="status" aria-live="polite"></p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="brand footer-brand" href="index.html" aria-label="Nord — на главную">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-copy"><span class="brand-name">nord<span>.</span></span><span class="brand-caption">оборудование для дела</span></span>
+        </a>
+        <p>Инструмент, который работает<br>вместе с вами.</p>
+        <a href="#top" class="back-top">Наверх <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="container footer-bottom">
+        <span>© Nord</span>
+        <span>Демо-путь покупки. Заказ и оплата не подключены.</span>
+        <div class="footer-links">
+          <a href="feedback.html">Обратная связь <span aria-hidden="true">↗</span></a>
+          <a href="product.html">Назад к товару <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

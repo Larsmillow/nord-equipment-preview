@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f7f3">
+    <meta
+      name="description"
+      content="База знаний Nord: памятки о выборе оборудования, сравнении моделей и вопросах перед покупкой."
+    >
+    <title>База знаний — Nord</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="resources-page-body">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Nord — на главную">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-copy">
+            <span class="brand-name">nord<span>.</span></span>
+            <span class="brand-caption">оборудование для дела</span>
+          </span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Открыть меню"
+        >
+          <span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+          <a href="catalog.html">Каталог</a>
+          <a href="service.html">Покупателям</a>
+          <a href="resources.html" aria-current="page">Материалы</a>
+          <a href="selection.html">Помощь с выбором</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+        <a class="header-cta" href="catalog.html">
+          <span>В каталог</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="resources-hero section-pad" id="top">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Материалы</span>
+          </nav>
+          <div class="resources-hero-grid">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Практично до покупки</p>
+              <h1>Разобраться,<br><span>а не угадывать.</span></h1>
+              <p class="resources-lead">Короткие памятки помогут сформулировать задачу, сравнить предложения и задать продавцу конкретные вопросы до оплаты.</p>
+              <a class="button button-primary" href="#resource-library">Выбрать тему <span aria-hidden="true">↓</span></a>
+            </div>
+            <aside class="resources-principle">
+              <span class="resources-principle-tag">ПРИНЦИП NORD</span>
+              <div class="resources-principle-mark" aria-hidden="true">≠</div>
+              <h2>Общее знание — не характеристика товара.</h2>
+              <p>В памятках нет неподтверждённых цифр и обещаний. Параметры и совместимость конкретной модели нужно сверять по документации производителя.</p>
+            </aside>
+          </div>
+          <div class="resources-hero-bottom">
+            <span><b>01</b> Сформулируйте задачу</span>
+            <span><b>02</b> Сверьте факты</span>
+            <span><b>03</b> Зафиксируйте условия</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="resource-library section-pad" id="resource-library" aria-labelledby="resource-library-title">
+        <div class="container">
+          <div class="resource-library-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> База знаний</p>
+              <h2 id="resource-library-title">Найдите нужное<br><span>для вашего решения.</span></h2>
+            </div>
+            <p>Откройте памятку, чтобы увидеть тезисы и вопросы, которые можно взять на консультацию.</p>
+          </div>
+          <div class="resource-controls">
+            <label class="resource-search">
+              <span class="resource-search-icon" aria-hidden="true">⌕</span>
+              <span class="visually-hidden">Поиск по материалам</span>
+              <input id="resource-search-input" type="search" placeholder="Например, «доставка» или «совместимость»" autocomplete="off">
+              <kbd aria-hidden="true">⌕</kbd>
+            </label>
+            <div class="resource-filters" role="group" aria-label="Фильтр материалов по теме">
+              <button type="button" class="resource-filter is-active" data-resource-filter="all" aria-pressed="true">Все темы</button>
+              <button type="button" class="resource-filter" data-resource-filter="selection" aria-pressed="false">Выбор</button>
+              <button type="button" class="resource-filter" data-resource-filter="comparison" aria-pressed="false">Сравнение</button>
+              <button type="button" class="resource-filter" data-resource-filter="purchase" aria-pressed="false">Покупка</button>
+            </div>
+          </div>
+          <p class="resource-results" id="resource-results" role="status" aria-live="polite"></p>
+
+          <div class="resource-grid" id="resource-grid">
+            <article class="resource-card" id="resource-selection" data-resource-card data-category="selection" data-search="с чего начать подбор оборудования задача объект поверхность материал объем режим">
+              <div class="resource-card-top"><span>ВЫБОР</span><span>5 мин</span></div>
+              <div class="resource-card-art resource-art-blue" aria-hidden="true">
+                <span class="resource-art-index">01</span>
+                <svg viewBox="0 0 170 108" fill="none"><path d="M24 79h122" stroke="currentColor" stroke-width="2"/><path d="m33 68 19-24 17 17 20-33 18 24 15-14 19 30" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="52" cy="44" r="5" fill="#F2A24B"/><circle cx="89" cy="28" r="5" fill="#F2A24B"/><path d="M34 91h102" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 7"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · ВЫБОР</p>
+                <h3>С чего начать подбор оборудования?</h3>
+                <p>Опишите работу так, чтобы продавец мог уточнить требования, а не подбирать модель наугад.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <p><strong>Соберите исходные данные:</strong></p>
+                    <ul><li>что именно предстоит окрашивать и где выполняется работа;</li><li>название материала и его документацию, если она есть;</li><li>примерный масштаб и регулярность работ;</li><li>ограничения объекта: доступ, питание, условия эксплуатации.</li></ul>
+                    <p>Не делайте вывод о совместимости по одному названию модели. Попросите подтвердить её по документации производителя.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="resource-card" id="resource-comparison" data-resource-card data-category="comparison" data-search="сравнить модели характеристики производительность комплектация расходники гарантия цена">
+              <div class="resource-card-top"><span>СРАВНЕНИЕ</span><span>6 мин</span></div>
+              <div class="resource-card-art resource-art-slate" aria-hidden="true">
+                <span class="resource-art-index">02</span>
+                <svg viewBox="0 0 170 108" fill="none"><rect x="35" y="18" width="39" height="68" rx="4" stroke="currentColor" stroke-width="2.5"/><rect x="96" y="18" width="39" height="68" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M44 34h21M44 44h15M44 63h21M105 34h21M105 44h15M105 63h21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="m77 51 8 8 10-16" stroke="#F2A24B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · СРАВНЕНИЕ</p>
+                <h3>Как сравнить две модели по делу?</h3>
+                <p>Сопоставляйте подтверждённые параметры и стоимость комплекта, а не только заголовок или цену.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <p>Попросите продавца заполнить одинаковую таблицу для каждой модели:</p>
+                    <ul><li>параметр и точная ссылка на документацию;</li><li>подтверждённые материалы и ограничения;</li><li>комплект поставки и необходимые дополнительные позиции;</li><li>актуальная итоговая цена и наличие;</li><li>гарантийные и сервисные условия.</li></ul>
+                    <p>Если данных для сравнения нет, отметьте их «не подтверждено» — не заменяйте догадкой или рекламной оценкой.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="resource-card" data-resource-card data-category="purchase" data-search="вопросы продавцу перед оплатой заказ цена доставка гарантия возврат документы">
+              <div class="resource-card-top"><span>ПОКУПКА</span><span>4 мин</span></div>
+              <div class="resource-card-art resource-art-sand" aria-hidden="true">
+                <span class="resource-art-index">03</span>
+                <svg viewBox="0 0 170 108" fill="none"><path d="M43 20h60l24 24v46H43z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M103 20v25h24M57 58h52M57 70h43" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="116" cy="77" r="19" fill="#FFF8ED" stroke="#F2A24B" stroke-width="2.5"/><path d="M116 67v11l7 4" stroke="#A66F2E" stroke-width="2.5" stroke-linecap="round"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · ПОКУПКА</p>
+                <h3>Что спросить до оплаты?</h3>
+                <p>Сверьте товар, цену, доставку и документы до перевода денег. Устные обещания попросите подтвердить письменно.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <ul><li>Каковы точное наименование, модель и состав комплекта?</li><li>Какова итоговая цена и что в неё включено?</li><li>Подтверждены ли наличие, способ и стоимость доставки?</li><li>Какие документы будут выданы при покупке и получении?</li><li>Куда обращаться по гарантии, сервису, обмену или возврату?</li></ul>
+                    <p>Сохраните ответ, договорённости и платёжные документы. Сроки и конкретные правила зависят от подтверждённых условий продажи и применимых норм.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="resource-card" id="resource-compatibility" data-resource-card data-category="selection" data-search="совместимость материала документация технический паспорт производитель ограничения проверить">
+              <div class="resource-card-top"><span>ВЫБОР</span><span>3 мин</span></div>
+              <div class="resource-card-art resource-art-navy" aria-hidden="true">
+                <span class="resource-art-index">04</span>
+                <svg viewBox="0 0 170 108" fill="none"><path d="M47 23h56l20 20v43H47z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M103 23v21h20M59 57h45M59 68h30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="114" cy="75" r="20" fill="#123D75" stroke="currentColor" stroke-width="2.5"/><path d="m105 75 6 6 12-14" stroke="#F2A24B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · ДОКУМЕНТЫ</p>
+                <h3>Как проверить совместимость?</h3>
+                <p>Название аппарата само по себе не подтверждает, что он подходит к вашему материалу или условиям.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <ul><li>найдите точное обозначение модели и актуальную документацию производителя;</li><li>проверьте в документации перечень совместимых материалов и ограничений;</li><li>сопоставьте требования материала с указанными параметрами оборудования;</li><li>при сомнении отправьте производителю или продавцу точное название материала и запросите письменный ответ.</li></ul>
+                    <p>Не используйте общие таблицы из интернета как замену руководству именно к этой модели и материалу.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="resource-card" id="resource-nozzles" data-resource-card data-category="selection" data-search="сопло nozzle paintip угол факел отверстие маркировка диаметр дюйм материал давление производительность">
+              <div class="resource-card-top"><span>ТЕХНИКА</span><span>5 мин</span></div>
+              <div class="resource-card-art resource-art-blue" aria-hidden="true">
+                <span class="resource-art-index">05</span>
+                <svg viewBox="0 0 170 108" fill="none"><path d="M32 52h36l16-17 18 17h36" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="m91 45 35-23m-35 23 35 12m-35-12 35 34" stroke="#F2A24B" stroke-width="2.5" stroke-linecap="round"/><path d="M32 75h106" stroke="currentColor" stroke-width="2" stroke-dasharray="4 6"/><circle cx="85" cy="52" r="6" fill="#F2A24B"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · РАСПЫЛЕНИЕ</p>
+                <h3>Как читать маркировку сопла?</h3>
+                <p>Угол факела и размер отверстия отвечают за разное. Важно сверить оба параметра с материалом и пределом конкретной модели.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <p>По гайду TECNOVER, первые цифры маркировки обозначают угол факела, последние две — отверстие в тысячных долях дюйма. Для примера, в условном обозначении 517 код содержит угол и размер отверстия; не воспринимайте этот пример как рекомендацию сопла для вашей краски.</p>
+                    <ul><li>сверьте рекомендуемое сопло в документации материала;</li><li>не превышайте максимальное отверстие, опубликованное для насоса;</li><li>учитывайте вязкость, частицы, фильтрацию и желаемую ширину полосы;</li><li>по мере износа сопло может менять факел и расход.</li></ul>
+                    <p>Ориентир ширины факела в гайде производителя — угол × 5 на расстоянии около 30 см. Это приблизительная оценка, а не обещание фактической ширины.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="resource-card" id="resource-maintenance" data-resource-card data-category="purchase" data-search="очистка промывка обслуживание сопло металлические предметы мембрана фильтр уплотнения инструкция безопасность давление">
+              <div class="resource-card-top"><span>ОБСЛУЖИВАНИЕ</span><span>4 мин</span></div>
+              <div class="resource-card-art resource-art-sand" aria-hidden="true">
+                <span class="resource-art-index">06</span>
+                <svg viewBox="0 0 170 108" fill="none"><path d="m48 54 22 22 52-52" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M45 24h33M45 35h20M44 88h81" stroke="#A66F2E" stroke-width="2.5" stroke-linecap="round"/><path d="M120 55v17m-8-9h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · УХОД</p>
+                <h3>Что сделать после работы?</h3>
+                <p>Короткая общая памятка TECNOVER об очистке и осмотре. Для безопасной остановки всегда нужна инструкция к вашей конкретной машине.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <ul><li>очистите систему без промедления совместимой с материалом жидкостью;</li><li>осмотрите фильтры, пистолет и сопло; не чистите калиброванное отверстие металлом;</li><li>проверяйте уплотнения, клапаны и диафрагму по регламенту производителя;</li><li>для остановки и снятия давления следуйте только руководству к точной модели и её комплекту.</li></ul>
+                    <p>Это не пошаговая процедура безопасности и не регламент технического обслуживания. Публичная статья производителя не заменяет руководство, обучение и средства защиты.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="resource-card" data-resource-card data-category="comparison" data-search="карточка товара спецификация характеристики источник гарантия сравнение данные">
+              <div class="resource-card-top"><span>СРАВНЕНИЕ</span><span>5 мин</span></div>
+              <div class="resource-card-art resource-art-blue" aria-hidden="true">
+                <span class="resource-art-index">07</span>
+                <svg viewBox="0 0 170 108" fill="none"><rect x="38" y="17" width="94" height="74" rx="5" stroke="currentColor" stroke-width="2.5"/><path d="M52 34h34M52 45h63M52 57h63M52 69h38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="110" cy="74" r="12" fill="#EDF3FA" stroke="#123D75" stroke-width="2"/><path d="m105 74 4 4 7-8" stroke="#F2A24B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · ДАННЫЕ</p>
+                <h3>Как читать карточку оборудования?</h3>
+                <p>Поймите, где подтверждённая спецификация, где комплектация, а где рекламная формулировка.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <ul><li>ищите точную модель и единицы измерения у каждого значения;</li><li>проверяйте дату или версию документа, к которому относится характеристика;</li><li>различайте параметр самого устройства и условия его достижения;</li><li>уточняйте, входит ли показанная принадлежность в цену.</li></ul>
+                    <p>Если у значения нет источника или оно не относится к конкретной комплектации, попросите уточнить это до сравнения.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="resource-card" data-resource-card data-category="purchase" data-search="получение осмотр приемка упаковка комплект документы повреждение перевозчик">
+              <div class="resource-card-top"><span>ПОКУПКА</span><span>4 мин</span></div>
+              <div class="resource-card-art resource-art-slate" aria-hidden="true">
+                <span class="resource-art-index">08</span>
+                <svg viewBox="0 0 170 108" fill="none"><path d="m85 18 37 19v36L85 92 48 73V37l37-19Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="m49 38 36 19 36-19M85 57v34M68 28l37 20" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="120" cy="72" r="16" fill="#F8FAFC" stroke="#F2A24B" stroke-width="2.5"/><path d="m113 72 5 5 9-11" stroke="#A66F2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · ПОЛУЧЕНИЕ</p>
+                <h3>Что проверить при получении?</h3>
+                <p>Заранее узнайте правила перевозчика и продавца, чтобы понимать, как зафиксировать недостачу или повреждение.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <ul><li>сверьте отправителя, наименование и число мест с документами;</li><li>осмотрите упаковку до подтверждения получения, если это допускают правила перевозки;</li><li>зафиксируйте видимые повреждения и недостачу способом, установленным перевозчиком;</li><li>свяжитесь с продавцом и действуйте по официальному порядку, указанному в документах.</li></ul>
+                    <p>Порядок и сроки фиксации могут отличаться. Уточните их заранее у продавца и перевозчика.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="resource-card" data-resource-card data-category="selection" data-search="производительность объекта расход материала площадь фактические условия тестовый выкрас результат">
+              <div class="resource-card-top"><span>ПЛАНИРОВАНИЕ</span><span>5 мин</span></div>
+              <div class="resource-card-art resource-art-navy" aria-hidden="true">
+                <span class="resource-art-index">09</span>
+                <svg viewBox="0 0 170 108" fill="none"><path d="M31 82h108M42 73V47h23v26m8 0V28h23v45m8 0V38h23v35" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M41 88h89" stroke="#F2A24B" stroke-width="3" stroke-linecap="round"/><path d="M42 36V23m31 0h23m8 5 12-12m15 22h15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 5"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · ПЛАНИРОВАНИЕ</p>
+                <h3>Как оценить работу на объекте?</h3>
+                <p>Паспортное значение не заменяет расчёт под материал, покрытие, условия площадки и реальный рабочий режим.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <ul><li>разделите общий объём на участки и отметьте сложные зоны;</li><li>уточните у производителя, при каких условиях получено указанное значение;</li><li>обсудите расход и режим работы на пробном участке с учётом инструкции к материалу;</li><li>заложите время на подготовку, укрытие, переналадку и очистку.</li></ul>
+                    <p>Не рассчитывайте сменную выработку только по максимальному расходу из рекламной карточки.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="resource-card" data-resource-card data-category="selection" data-search="фильтр фильтрация расходники сетка материал оборудование совместимость инструкция производителя">
+              <div class="resource-card-top"><span>КОМПЛЕКТАЦИЯ</span><span>4 мин</span></div>
+              <div class="resource-card-art resource-art-sand" aria-hidden="true">
+                <span class="resource-art-index">10</span>
+                <svg viewBox="0 0 170 108" fill="none"><path d="M47 21h76l-29 33v25l-18 9V54L47 21Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M58 32h54M66 41h38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="111" cy="75" r="16" fill="#FFF8ED" stroke="#F2A24B" stroke-width="2.5"/><path d="m104 75 5 5 10-12" stroke="#A66F2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · ФИЛЬТРАЦИЯ</p>
+                <h3>Как проверить фильтры и расходники?</h3>
+                <p>Подходящий фильтр нельзя выбирать только по внешнему виду: важны требования материала и конкретной системы.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <ul><li>найдите рекомендации по фильтрации в документации материала;</li><li>сверьте тип и положение фильтров с руководством аппарата;</li><li>уточните совместимость сменной детали по точному артикулу и модели;</li><li>попросите показать, какие расходники входят в комплект, а какие приобретаются отдельно.</li></ul>
+                    <p>Не подбирайте размер ячейки или замену фильтра «по аналогии» без подтверждения производителя.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="resource-card" data-resource-card data-category="selection" data-search="тест проба пробный выкрас распыление факел оценка покрытия настройка материал безопасность">
+              <div class="resource-card-top"><span>ПРАКТИКА</span><span>5 мин</span></div>
+              <div class="resource-card-art resource-art-blue" aria-hidden="true">
+                <span class="resource-art-index">11</span>
+                <svg viewBox="0 0 170 108" fill="none"><rect x="40" y="18" width="90" height="72" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M52 75c10-2 16-8 21-20 5-13 12-13 17 0 5 12 12 18 28 20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M52 79h64" stroke="#F2A24B" stroke-width="3" stroke-linecap="round"/><circle cx="85" cy="46" r="3" fill="#F2A24B"/><circle cx="73" cy="40" r="2" fill="currentColor"/><circle cx="96" cy="38" r="2" fill="currentColor"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · ПРОБА</p>
+                <h3>Зачем делать пробный выкрас?</h3>
+                <p>Небольшая проба помогает проверить выбранный материал и настройку до начала основного объёма работ.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <ul><li>подготовьте тестовую поверхность по инструкции к материалу;</li><li>используйте режим и сопло, разрешённые руководством оборудования;</li><li>оцените результат после высыхания в условиях, указанных производителем покрытия;</li><li>запишите материал, принадлежности и настройки, которые дали приемлемый результат.</li></ul>
+                    <p>Проба не заменяет требования охраны труда, паспорт безопасности материала и инструкции изготовителей.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="resource-card" data-resource-card data-category="purchase" data-search="журнал настройки параметры расходные части обслуживание история дата материал давление сопло документы">
+              <div class="resource-card-top"><span>СИСТЕМНОСТЬ</span><span>3 мин</span></div>
+              <div class="resource-card-art resource-art-slate" aria-hidden="true">
+                <span class="resource-art-index">12</span>
+                <svg viewBox="0 0 170 108" fill="none"><path d="M49 19h57l18 18v52H49z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M106 19v19h18M61 51h48M61 62h48M61 73h31" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="m101 75 7 7 15-17" stroke="#F2A24B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="resource-card-copy">
+                <p class="resource-card-kicker">ПАМЯТКА · УЧЁТ</p>
+                <h3>Что записывать после настройки?</h3>
+                <p>Короткий журнал помогает повторить проверенный рабочий процесс и точнее описать вопрос сервису.</p>
+                <details class="resource-details">
+                  <summary>Открыть памятку <span aria-hidden="true">+</span></summary>
+                  <div class="resource-detail-body">
+                    <p>Для каждой задачи сохраняйте:</p>
+                    <ul><li>модель и комплектацию оборудования;</li><li>точное название материала и ссылку на его техническое описание;</li><li>сопло, принадлежности и настройки по руководству;</li><li>наблюдения по пробе, очистке и состоянию расходников.</li></ul>
+                    <p>Записи не заменяют сервисный регламент. Обслуживайте технику по руководству именно к вашей модели.</p>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </div>
+          <p class="resource-empty" id="resource-empty" hidden>Не нашли подходящих материалов. Измените запрос или выберите другую тему.</p>
+        </div>
+      </section>
+
+      <section class="resource-cta">
+        <div class="container resource-cta-inner">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Примените к своей задаче</p>
+            <h2>Соберите вводные<br><span>для разговора.</span></h2>
+            <p>Короткий помощник сформирует бриф — без автоматических обещаний подобрать модель.</p>
+          </div>
+          <a class="button button-primary" href="selection.html">Описать задачу <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="brand footer-brand" href="index.html" aria-label="Nord — на главную">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-copy"><span class="brand-name">nord<span>.</span></span><span class="brand-caption">оборудование для дела</span></span>
+        </a>
+        <p>Инструмент, который работает<br>вместе с вами.</p>
+        <a href="#top" class="back-top">Наверх <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="container footer-bottom">
+        <span>© Nord</span>
+        <span>Материалы носят информационный характер.</span>
+        <div class="footer-links">
+          <a href="feedback.html">Обратная связь <span aria-hidden="true">↗</span></a>
+          <a href="service.html">Покупателям <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
