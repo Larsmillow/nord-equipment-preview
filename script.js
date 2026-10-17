@@ -541,6 +541,24 @@ if (resourceGrid) {
 
 const tecnoverGrid = document.querySelector("#tecnover-grid");
 
+const gtbMainImage = document.querySelector("#gtb-main-image");
+
+if (gtbMainImage) {
+  const galleryButtons = [...document.querySelectorAll("[data-listing-image]")];
+
+  galleryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      gtbMainImage.src = button.dataset.listingImage;
+      gtbMainImage.alt = button.dataset.listingAlt;
+      galleryButtons.forEach((item) => {
+        const selected = item === button;
+        item.classList.toggle("is-active", selected);
+        item.setAttribute("aria-pressed", String(selected));
+      });
+    });
+  });
+}
+
 if (tecnoverGrid) {
   const cards = [...tecnoverGrid.querySelectorAll("[data-tecnover-card]")];
   const filterButtons = [...document.querySelectorAll("[data-tecnover-filter]")];
