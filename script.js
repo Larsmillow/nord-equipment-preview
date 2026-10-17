@@ -58,6 +58,91 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const heroCarousel = document.querySelector(".hero-product-carousel");
+
+if (heroCarousel) {
+  const slides = [...heroCarousel.querySelectorAll("[data-hero-slide]")];
+  const dots = [...heroCarousel.querySelectorAll("[data-hero-go]")];
+  const pauseButton = heroCarousel.querySelector("[data-hero-pause]");
+  let activeSlide = 0;
+  let autoplayPaused = motionPreference.matches;
+  let focusPaused = false;
+  let rotationTimer;
+
+  function showHeroSlide(index) {
+    activeSlide = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeSlide;
+      slide.hidden = !isActive;
+      slide.classList.toggle("is-active", isActive);
+      slide.setAttribute("aria-hidden", String(!isActive));
+    });
+    dots.forEach((dot, dotIndex) => {
+      const isActive = dotIndex === activeSlide;
+      dot.classList.toggle("is-active", isActive);
+      dot.setAttribute("aria-pressed", String(isActive));
+    });
+  }
+
+  function updateRotation() {
+    window.clearInterval(rotationTimer);
+    if (slides.length < 2 || autoplayPaused) return;
+    rotationTimer = window.setInterval(() => {
+      if (document.hidden || focusPaused || heroCarousel.matches(":hover")) return;
+      showHeroSlide(activeSlide + 1);
+    }, 2000);
+  }
+
+  function showManualSelection(index) {
+    focusPaused = false;
+    showHeroSlide(index);
+    updateRotation();
+  }
+
+  function updatePauseButton() {
+    if (!pauseButton) return;
+    pauseButton.setAttribute("aria-pressed", String(autoplayPaused));
+    pauseButton.setAttribute(
+      "aria-label",
+      autoplayPaused ? "Запустить автоматическую смену слайдов" : "Остановить автоматическую смену слайдов",
+    );
+    pauseButton.textContent = autoplayPaused ? "▶" : "Ⅱ";
+  }
+
+  heroCarousel.querySelector("[data-hero-prev]")?.addEventListener("click", () => {
+    showManualSelection(activeSlide - 1);
+  });
+  heroCarousel.querySelector("[data-hero-next]")?.addEventListener("click", () => {
+    showManualSelection(activeSlide + 1);
+  });
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      showManualSelection(Number(dot.dataset.heroGo));
+    });
+  });
+  pauseButton?.addEventListener("click", () => {
+    autoplayPaused = !autoplayPaused;
+    focusPaused = false;
+    updatePauseButton();
+    updateRotation();
+  });
+  heroCarousel.addEventListener("focusin", () => {
+    focusPaused = true;
+    updateRotation();
+  });
+  heroCarousel.addEventListener("focusout", (event) => {
+    if (!heroCarousel.contains(event.relatedTarget)) {
+      focusPaused = false;
+      updateRotation();
+    }
+  });
+  document.addEventListener("visibilitychange", updateRotation);
+  window.addEventListener("pagehide", () => window.clearInterval(rotationTimer), { once: true });
+
+  updatePauseButton();
+  updateRotation();
+}
+
 const inquiryForm = document.querySelector("#inquiry-form");
 const formStatus = document.querySelector("#form-status");
 const phoneInput = document.querySelector("#phone");
